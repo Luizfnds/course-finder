@@ -1,0 +1,13 @@
+{
+    "name": "edu/course-finder",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Edu",
+            "email": "luizeduardofnds@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}
