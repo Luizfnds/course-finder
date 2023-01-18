@@ -7,8 +7,8 @@ use Symfony\Component\DomCrawler\Crawler;
 
 use function PHPSTORM_META\type;
 
-class Finder {
-    
+class Finder
+{
     private $httpClient;
 
     private $crawler;
@@ -19,7 +19,7 @@ class Finder {
         $this->crawler = $crawler;
     }
 
-    public function find(string $url) : array
+    public function find(string $url): array
     {
         $response = $this->httpClient->request("GET", $url);
         $html = $response->getBody();
@@ -28,11 +28,10 @@ class Finder {
         $coursesElements = $this->crawler->filter("span.card-curso__nome");
         $courses = [];
 
-        foreach($coursesElements as $element) {
+        foreach ($coursesElements as $element) {
             $courses[] = $element->textContent;
         }
 
         return $courses;
     }
-
 }
