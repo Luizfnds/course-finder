@@ -22,6 +22,12 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "cs": "phpcs --standard=PSR12 src/"
+        "cs": "phpcs --standard=PSR12 src/",
+        "check": [
+            "@cs"
+        ]
+    },
+    "scripts-descriptions": {
+        "cs": "verifica melhorias que podem ser feitas no código com base a padronização PSR12"
     }
 }
