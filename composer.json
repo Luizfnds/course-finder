@@ -20,5 +20,8 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "cs": "phpcs --standard=PSR12 src/"
     }
 }
