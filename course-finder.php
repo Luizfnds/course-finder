@@ -1,17 +1,18 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . "/vendor/autoload.php";
+require "src/Finder.php";
 
+use Edu\CourseFinder\Finder;
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
-$client = new Client();
-$resposta = $client->request('GET', 'https://www.alura.com.br/cursos-online-programacao/php');
-$html = $resposta->getBody();
+$client = new Client(["base_uri" => "https://www.alura.com.br/"]);
+$crawler = new Crawler();
 
-$crawler = new Crawler($html);
-$cursos = $crawler->filter('span.card-curso__nome');
+$finder = new Finder($client, $crawler);
+$courses = $finder->find("cursos-online-programacao/php");
 
-foreach($cursos as $curso) {
-    echo $curso->textContent . PHP_EOL;
+foreach($courses as $course) {
+    echo $course . PHP_EOL;
 }
