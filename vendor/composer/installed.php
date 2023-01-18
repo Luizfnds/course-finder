@@ -3,7 +3,7 @@
         'name' => 'edu/course-finder',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4b1e18240a2ebed4ecbd38e9a50131eb8c6ff323',
+        'reference' => '9925200f1c628cd23f11e424d06450420c0be963',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'edu/course-finder' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4b1e18240a2ebed4ecbd38e9a50131eb8c6ff323',
+            'reference' => '9925200f1c628cd23f11e424d06450420c0be963',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

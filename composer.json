@@ -25,6 +25,9 @@
         "cs": "phpcs --standard=PSR12 src/",
         "check": [
             "@cs"
+        ],
+        "post-update-cmd": [
+            "@cs"
         ]
     },
     "scripts-descriptions": {
