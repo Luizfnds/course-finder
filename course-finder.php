@@ -1,7 +1,6 @@
 <?php
 
 require __DIR__ . "/vendor/autoload.php";
-require "src/Finder.php";
 
 use Edu\CourseFinder\Finder;
 use GuzzleHttp\Client;
