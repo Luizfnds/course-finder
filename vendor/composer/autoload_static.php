@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd9dbd372eda7352810a6402bc226af7d
+class ComposerStaticInit2006234e57da4a8d5ed863a4e75839a6
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -21,6 +21,7 @@ class ComposerStaticInitd9dbd372eda7352810a6402bc226af7d
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\CssSelector\\' => 30,
         ),
         'P' => 
         array (
@@ -51,6 +52,10 @@ class ComposerStaticInitd9dbd372eda7352810a6402bc226af7d
         'Symfony\\Component\\DomCrawler\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
+        'Symfony\\Component\\CssSelector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/css-selector',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -86,9 +91,9 @@ class ComposerStaticInitd9dbd372eda7352810a6402bc226af7d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd9dbd372eda7352810a6402bc226af7d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd9dbd372eda7352810a6402bc226af7d::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd9dbd372eda7352810a6402bc226af7d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2006234e57da4a8d5ed863a4e75839a6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2006234e57da4a8d5ed863a4e75839a6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2006234e57da4a8d5ed863a4e75839a6::$classMap;
 
         }, null, ClassLoader::class);
     }

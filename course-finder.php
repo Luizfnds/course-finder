@@ -1,7 +1,17 @@
 <?php
 
-use \GuzzleHttp\Client;
+require __DIR__ . '/vendor/autoload.php';
+
+use GuzzleHttp\Client;
+use Symfony\Component\DomCrawler\Crawler;
 
 $client = new Client();
-$responta = $client->request('GET', 'https://cursos.alura.com.br/category/programacao/php');
-$html = $responta->getBody();
+$resposta = $client->request('GET', 'https://www.alura.com.br/cursos-online-programacao/php');
+$html = $resposta->getBody();
+
+$crawler = new Crawler($html);
+$cursos = $crawler->filter('span.card-curso__nome');
+
+foreach($cursos as $curso) {
+    echo $curso->textContent . PHP_EOL;
+}
